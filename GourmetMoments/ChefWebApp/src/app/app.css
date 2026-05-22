@@ -1,0 +1,727 @@
+/* Global styles for ChefWebApp */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigációs sáv */
+.navbar {
+  background-color: #000000;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  opacity: 0.8;
+}
+
+/* Navigációs menü */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: rgb(114, 221, 120);
+}
+
+/* Keresőűrlap */
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  width: 150px;
+}
+
+.search-button {
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  color: rgb(114, 221, 120);
+  font-weight: 600;
+}
+
+.search-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hamburger ikon (rejtett 992px felett) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.app-main {
+  min-height: calc(100vh - 170px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Bevezető szekció */
+.hero-section {
+  padding: 4rem 3rem;
+  background: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  color: rgb(114, 221, 120);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Szolgáltatások szekció */
+.services-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.services-section h2 {
+  font-size: 3rem;
+  color: rgb(114, 221, 120);
+}
+
+.service-item {
+  margin-bottom: 3rem;
+  background: white;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 350px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-text {
+  flex: 1;
+  padding: 2rem;
+}
+
+.service-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.service-text h3::first-letter {
+  font-size: 2.2rem;
+  color: rgb(114, 221, 120);
+}
+
+.service-text p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.btn-primary {
+  background-color: rgb(114, 221, 120);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #7ade84;
+}
+
+/* Rólunk szekció */
+.about-section {
+  padding: 4rem 3rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  color: rgb(114, 221, 120);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Kapcsolat szekció */
+.contact-section {
+  padding: 4rem 3rem;
+  background: white;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+  color: rgb(114, 221, 120);
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Lábléc */
+.footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Séfek szekció */
+.chefs-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.chefs-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.chefs-section h2::first-letter {
+  font-size: 3rem;
+  color: rgb(114, 221, 120);
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgb(114, 221, 120);
+}
+
+.chefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chef-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chef-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chef-image {
+  height: 200px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.chef-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.chef-info {
+  padding: 1.5rem;
+}
+
+.chef-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.chef-info h3::first-letter {
+  color: rgb(114, 221, 120);
+  font-size: 1.8rem;
+}
+
+.chef-info p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.pricing {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.btn-rent {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(114, 221, 120);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-rent:hover {
+  background-color: #7ade84;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.modal-content h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.modal-content h3::first-letter {
+  color: rgb(114, 221, 120);
+  font-size: 1.8rem;
+}
+
+.rental-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgb(114, 221, 120);
+}
+
+.price-summary {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid rgb(114, 221, 120);
+}
+
+.price-summary p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.btn-confirm {
+  padding: 0.75rem;
+  background-color: rgb(114, 221, 120);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background-color: #7ade84;
+}
+
+.btn-confirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  animation: slideIn 0.3s ease;
+}
+
+.toast-success {
+  background-color: rgb(114, 221, 120);
+  color: white;
+  border-left: 4px solid #4a9d42;
+}
+
+.toast-error {
+  background-color: #ff6b6b;
+  color: white;
+  border-left: 4px solid #e63946;
+}
+
+.toast-warning {
+  background-color: #ffc107;
+  color: #333;
+  border-left: 4px solid #ff9800;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .chefs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chefs-section {
+    padding: 2rem 1rem;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .toast-container {
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast {
+    min-width: auto;
+  }
+}
+
+/* Reszponzív - Desktop (992px és felül) */
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    max-height: none;
+    overflow: visible;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-item {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .navbar-container {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+
+/* Reszponzív - Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .service-content {
+    flex-direction: column;
+  }
+
+  .service-content.reverse {
+    flex-direction: column;
+  }
+
+  .service-image {
+    height: 300px;
+  }
+}
+
+/* Reszponzív - Mobil (768px alatt) */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #000000;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
+  }
+
+  .nav-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .search-form {
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  .service-content,
+  .service-content.reverse {
+    flex-direction: column;
+  }
+
+  .service-image {
+    height: 250px;
+    margin-top: 1rem;
+  }
+
+  .service-text {
+    padding: 1rem 0;
+  }
+}

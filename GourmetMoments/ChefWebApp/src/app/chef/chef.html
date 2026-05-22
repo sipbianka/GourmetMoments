@@ -1,0 +1,80 @@
+ <!-- Séfek listázása szekció -->
+  <section id="chefs" class="chefs-section">
+    <h2>Bérelhető Séfek</h2>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Keresés séf neve vagy konyhastílusa alapján..."
+      />
+    </div>
+
+    <!-- Chefs Grid -->
+    <div class="chefs-grid">
+      <div *ngIf="filteredChefs.length === 0" class="no-results">
+        <p>Nincs találat a kereséshez</p>
+      </div>
+
+      <div *ngFor="let chef of filteredChefs" class="chef-card">
+        <div class="chef-image" *ngIf="chef.image; else noImage">
+          <img [src]="chef.image" [alt]="chef.name" />
+        </div>
+
+        <div class="chef-info">
+          <h3>{{ chef.name }}</h3>
+          <p class="cuisine"><strong>Stílus:</strong> {{ chef.cuisine }}</p>
+          <p class="experience"><strong>Tapasztalat:</strong> {{ chef.experience }} év</p>
+          <div class="pricing">
+            <p><strong>Napi ár:</strong> {{ chef.dailyRate }} Ft</p>
+            <p><strong>Alapdíj:</strong> {{ chef.baseFee }} Ft</p>
+          </div>
+          <button class="btn-rent" (click)="openRentalModal(chef)">Bérlés</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Rental Modal -->
+    <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeModal()">×</button>
+        
+        <h3 *ngIf="selectedChef">{{ selectedChef }} bérlése</h3>
+        
+        <div *ngIf="selectedChef" class="rental-form">
+          <div class="form-group">
+            <label>Kezdés dátuma:</label>
+            <input
+              type="date"
+              [min]="getMinDate()"
+              (change)="calculatePrice()"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Befejezés dátuma:</label>
+            <input
+              type="date"
+              [min]="rentalForm.startDate || getMinDate()"
+              (change)="calculatePrice()"
+            />
+          </div>
+
+          <div class="price-summary" *ngIf="rentalForm.duration > 0">
+            <p><strong>Időtartam:</strong> {{ rentalForm.duration }} nap</p>
+            <p><strong>Teljes ár:</strong> {{ rentalForm.totalPrice }} Ft</p>
+          </div>
+
+          <button
+            class="btn-confirm"
+            (click)="submitRental()"
+            [disabled]="rentalLoading"
+          >
+            {{ rentalLoading ? 'Feldolgozás...' : 'Bérlés megerősítése' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
