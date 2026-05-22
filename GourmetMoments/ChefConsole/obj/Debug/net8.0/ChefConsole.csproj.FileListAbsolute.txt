@@ -1,0 +1,15 @@
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\bin\Debug\net8.0\ChefConsole.exe
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\bin\Debug\net8.0\ChefConsole.deps.json
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\bin\Debug\net8.0\ChefConsole.runtimeconfig.json
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\bin\Debug\net8.0\ChefConsole.dll
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\bin\Debug\net8.0\ChefConsole.pdb
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.AssemblyInfoInputs.cache
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.AssemblyInfo.cs
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.csproj.CoreCompileInputs.cache
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.sourcelink.json
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.dll
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\refint\ChefConsole.dll
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.pdb
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ChefConsole.genruntimeconfig.cache
+C:\Users\Diak\source\repos\GourmetMoments\GourmetMoments\ChefConsole\obj\Debug\net8.0\ref\ChefConsole.dll
